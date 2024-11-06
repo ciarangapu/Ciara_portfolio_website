@@ -1,0 +1,90 @@
+/* General styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Describing the madia query for mobile screen */
+@media (min-width: 375px) and (max-width: 768px) {
+  .logo a {
+    font-size: 25px;
+    text-decoration: none;
+    color: #36b37e;
+    margin: 10px;
+  }
+
+  .desktop_menu {
+    display: none;
+  }
+
+  .mobile_menu {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    align-items: end;
+    margin: 10px 15px;
+  }
+
+  .mobile_menu p {
+    padding: 1.5px 10px;
+    background-color: black;
+  }
+
+  .hero {
+    background: url(/assets/images/header-illsutration-mobile@2x.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 45px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    text-transform: capitalize;
+  }
+
+  .first,
+  .second {
+    text-align: center;
+    font-size: 45px;
+    font-weight: bold;
+  }
+
+  .first {
+    margin: 25px 0 0 0;
+    padding: 10px 50px;
+  }
+
+  .second {
+    color: #36b37e;
+    margin-top: -40px;
+  }
+
+  .hero_paragraph {
+    font-size: 25px;
+    text-align: center;
+    margin: 10px 15px;
+  }
+
+  .social_icons ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 15px;
+    list-style: none;
+  }
+
+  .action {
+    margin-top: 20px;
+  }
+}
