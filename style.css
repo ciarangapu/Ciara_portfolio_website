@@ -217,7 +217,12 @@
     flex-direction: column;
     margin: 10px 0;
   }
-
+  
+  .about {
+    background: url(./assets/images/illustration-about-me-2-desktop.svg) top left, url(assets/images/illustration\ about\ me\ desktop\ \(1\).svg) top right;
+    background-repeat: no-repeat;
+    margin-top: 150px;
+  }
   .about_text h2 {
     font-size: 28px;
     font-weight: bold;
@@ -827,11 +832,13 @@
     flex-direction: column;
     margin: 10px 0;
   }
-  .about{
-    background: url(./assets/images/illustration-about-me-2-desktop.svg) top left,url(assets/images/illustration\ about\ me\ desktop\ \(1\).svg) top right;
+
+  .about {
+    background: url(./assets/images/illustration-about-me-2-desktop.svg) top left, url(assets/images/illustration\ about\ me\ desktop\ \(1\).svg) top right;
     background-repeat: no-repeat;
     margin-top: 150px;
   }
+
   .about_text h2 {
     font-size: 28px;
     font-weight: bold;
@@ -842,7 +849,7 @@
     margin: 10px 3px;
     width: 600px;
     line-height: 32px;
-    color: #42526E;
+    color: #42526e;
     font-size: 20px;
   }
 
@@ -896,9 +903,8 @@
     margin: 10px 0 30px 0;
     width: 89.5%;
     padding: 40px 170px;
-    background: url(assets/images/illustration-1-contact-form-desktop.svg),url(assets/images/illustration-2-contact-form-desktop.svg) bottom, url(assets/images/contact\ form-illustratoin-3-desktop.svg) bottom right;
+    background: url(assets/images/illustration-1-contact-form-desktop.svg), url(assets/images/illustration-2-contact-form-desktop.svg) bottom, url(assets/images/contact\ form-illustratoin-3-desktop.svg) bottom right;
     background-repeat: no-repeat;
-
   }
 
   .contact p {
