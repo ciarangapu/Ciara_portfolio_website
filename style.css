@@ -217,12 +217,12 @@
     flex-direction: column;
     margin: 10px 0;
   }
-  
+
   .about {
-    background: url(./assets/images/illustration-about-me-2-desktop.svg) top left, url(assets/images/illustration\ about\ me\ desktop\ \(1\).svg) top right;
+    background: url(./assets/images/illustration-about-me-2-desktop.svg) top left, url(assets/images/illustration\ about\ me\ desktop.svg) top right;
     background-repeat: no-repeat;
-    margin-top: 150px;
   }
+
   .about_text h2 {
     font-size: 28px;
     font-weight: bold;
@@ -834,7 +834,7 @@
   }
 
   .about {
-    background: url(./assets/images/illustration-about-me-2-desktop.svg) top left, url(assets/images/illustration\ about\ me\ desktop\ \(1\).svg) top right;
+    background: url(./assets/images/illustration-about-me-2-desktop.svg) top left, url(assets/images/illustration\ about\ me\ desktop.svg) top right;
     background-repeat: no-repeat;
     margin-top: 150px;
   }
