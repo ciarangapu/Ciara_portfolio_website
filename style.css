@@ -218,18 +218,12 @@
     margin: 10px 0;
   }
 
-  .about {
-    background: url(./assets/images/illustration-about-me-2-desktop.svg) top left, url(assets/images/illustration\ about\ me\ desktop.svg) top right;
-    background-repeat: no-repeat;
-  }
-
-  .about_text h2 {
-    font-size: 28px;
-    font-weight: bold;
+  .about_text {
+    background: url(./assets/images/abt_left_mob.svg) no-repeat left bottom, url(./assets/images/abt_mobile_right.svg) right top no-repeat;
   }
 
   .about_text p {
-    font-size: 25px;
+    font-size: 18px;
     text-align: center;
     margin: 10px 3px;
   }
@@ -274,11 +268,15 @@
 
   /* contact Section */
   .contact {
-    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     margin: 10px 0 30px 0;
+    display: flex;
+    gap: 20px;
+    background: url(assets/images/contact\ form-illustratoin-3-desktop.svg) bottom right;
+    background-repeat: no-repeat;
+    color: #172b4d;
   }
 
   .contact p {
@@ -517,6 +515,10 @@
     margin: 10px 0;
   }
 
+  .about_text {
+    background: url(./assets/images/abt_left_mob.svg) no-repeat left bottom, url(./assets/images/abt_mobile_right.svg) right top no-repeat;
+  }
+
   .about_text h2 {
     font-size: 28px;
     font-weight: bold;
@@ -580,6 +582,7 @@
     font-size: 30px;
     padding: 10px 50px;
     font-weight: bold;
+    color: #172b4d;
   }
 
   form {
