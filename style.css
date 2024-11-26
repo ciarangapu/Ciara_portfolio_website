@@ -15,28 +15,31 @@
   }
 
   .desktop_menu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    display: none;
   }
 
-  .desktop_menu ul li a {
-    text-decoration: none;
+  .desktop_menu.active {
     display: flex;
+    position: absolute;
+    width: 100%;
+    height: 95%;
+    background-color: #fff;
   }
 
-  .desktop_menu ul {
+  .desktop_menu.active ul {
     display: flex;
     gap: 50px;
-    align-items: center;
-    justify-content: center;
-    padding: 2px 5px;
+    margin-left: 30px;
+    z-index: 1000;
+    flex-direction: column;
+    list-style: none;
   }
 
-  .desktop_menu ul li {
-    visibility: hidden;
-    display: flex;
+  .desktop_menu.active ul li a {
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #172b4d;
   }
 
   .mobile_menu {
@@ -58,6 +61,20 @@
   .mobile_menu p {
     padding: 1.5px 10px;
     background-color: black;
+  }
+
+  .mobile_menu.active p:nth-child(1) {
+    rotate: 45deg;
+    position: relative;
+    bottom: -12px;
+  }
+
+  .mobile_menu.active p:nth-child(2) {
+    opacity: 0;
+  }
+
+  .mobile_menu.active p:nth-child(3) {
+    rotate: -45deg;
   }
 
   .hero {
@@ -338,6 +355,80 @@
     flex-direction: column;
     margin: 10px;
   }
+
+  .modal {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: red;
+    background-color: rgb(134, 129, 129);
+  }
+
+  .modalImage {
+    width: 100%;
+    height: 100%;
+  }
+
+  .modalLink {
+    display: flex;
+    gap: 20px;
+    padding-top: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .modalLink a {
+    background-color: #36b37e;
+    font-size: 1rem;
+    font-weight: 900;
+    padding: 10px 40px;
+    border-radius: 3px;
+    text-transform: capitalize;
+  }
+
+  .modalcontent {
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    margin: 20px;
+    width: 590px;
+  }
+
+  .close_button {
+    position: relative;
+    top: 30px;
+    left: 240px;
+    font-size: 32px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #333;
+  }
+
+  #modaltechnologies {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    gap: 10px;
+    margin-top: 20px;
+    list-style: none;
+    margin-bottom: 10px;
+  }
+
+  #modaltechnologies li {
+    background-color: #d0d9d4;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+  }
 }
 
 /* TABLET SECTION */
@@ -443,6 +534,30 @@
     display: none;
   }
 
+  .desktop_menu.active {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 95%;
+    background-color: #fff;
+  }
+
+  .desktop_menu.active ul {
+    display: flex;
+    gap: 50px;
+    margin-left: 30px;
+    z-index: 1000;
+    flex-direction: column;
+    list-style: none;
+  }
+
+  .desktop_menu.active ul li a {
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #172b4d;
+  }
+
   .mobile_menu {
     display: flex;
     flex-direction: column;
@@ -454,6 +569,25 @@
   .mobile_menu p {
     padding: 1.5px 10px;
     background-color: black;
+  }
+
+  .mobile_menu p {
+    padding: 1.5px 10px;
+    background-color: black;
+  }
+
+  .mobile_menu.active p:nth-child(1) {
+    rotate: 45deg;
+    position: relative;
+    bottom: -12px;
+  }
+
+  .mobile_menu.active p:nth-child(2) {
+    opacity: 0;
+  }
+
+  .mobile_menu.active p:nth-child(3) {
+    rotate: -45deg;
   }
 
   .hero {
@@ -644,6 +778,78 @@
     margin-left: 250px;
     margin-right: 250px;
   }
+
+  .modal {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: red;
+    background-color: rgb(134, 129, 129);
+  }
+
+  .modalImage {
+    width: 100%;
+    height: 100%;
+  }
+
+  .modalLink {
+    display: flex;
+    gap: 20px;
+    padding-top: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .modalLink a {
+    font-size: 1rem;
+    font-weight: 900;
+    padding: 10px 40px;
+    text-transform: capitalize;
+  }
+
+  .modalcontent {
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    margin: 20px;
+    width: 590px;
+  }
+
+  .close_button {
+    position: relative;
+    top: 30px;
+    left: 240px;
+    font-size: 32px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #333;
+  }
+
+  #modaltechnologies {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    gap: 10px;
+    margin-top: 20px;
+    list-style: none;
+    margin-bottom: 10px;
+  }
+
+  #modaltechnologies li {
+    background-color: #d0d9d4;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+  }
 }
 
 /* DESKTOP SECTION */
@@ -684,25 +890,24 @@
     justify-content: center;
     align-items: center;
     gap: 15px;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .project_card {
     border: 1px solid #ebf0ee;
-    width: 327px;
-    height: 474px;
+    width: 322px;
+    height: 472px;
     border-radius: 8px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 10px;
-    padding: 0 0 20px 0;
   }
 
   .project_card img {
-    height: 100%;
-    width: 327px;
+    height: auto;
+    width: 100%;
     background-color: #d0d9d4;
   }
 
@@ -859,7 +1064,7 @@
   .about_cards {
     gap: 10px;
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: repeat(3, 1fr);
     justify-content: center;
     align-items: center;
   }
@@ -971,5 +1176,77 @@
     list-style: none;
     width: 300px;
     margin-right: 600px;
+  }
+
+  .modal {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: red;
+    background-color: rgb(134, 129, 129);
+  }
+
+  .modalImage {
+    width: 100%;
+    height: 100%;
+  }
+
+  .modalLink {
+    display: flex;
+    gap: 20px;
+    padding-top: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .modalLink a {
+    font-size: 1rem;
+    font-weight: 900;
+    padding: 10px 40px;
+    text-transform: capitalize;
+  }
+
+  .modalcontent {
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    margin: 20px;
+    width: 590px;
+  }
+
+  .close_button {
+    position: relative;
+    top: 30px;
+    left: 240px;
+    font-size: 32px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #333;
+  }
+
+  #modaltechnologies {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    gap: 10px;
+    margin-top: 20px;
+    list-style: none;
+    margin-bottom: 10px;
+  }
+
+  #modaltechnologies li {
+    background-color: #d0d9d4;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-weight: bold;
   }
 }
