@@ -13,40 +13,61 @@
     color: #36b37e;
     margin: 10px;
   }
-
   .desktop_menu {
+    display: none;
+  }
+  .desktop_menu.active{
+    display: flex;
+    position: absolute;
+  height: 100vh;
+  width: 375px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  transition: all 50000s ease;
+  }
+  .desktop_menu.active ul{
+    z-index: 1000;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    list-style: none;
+    gap: 20px;
+    margin: 50px 30px;
+    transition: all 50000s ease;
   }
-
-  .desktop_menu ul li a {
+  
+  .desktop_menu.active ul li a{
     text-decoration: none;
-    display: flex;
+    color: #3A4A42;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 23px;
+    
   }
+.mobile_menu {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  align-items: end;
+  margin: 10px 15px;
+}
 
-  .desktop_menu ul {
-    display: flex;
-    gap: 50px;
-    align-items: center;
-    justify-content: center;
-    padding: 2px 5px;
-  }
-
-  .desktop_menu ul li {
-    visibility: hidden;
-    display: flex;
-  }
-
-  .mobile_menu {
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
-    align-items: end;
-    margin: 10px 15px;
-  }
-
+.mobile_menu p {
+  padding: 1.5px 10px;
+  background-color: black;
+}
+.mobile_menu.active p:nth-child(1){
+  rotate: 45deg;
+  top: 6px;
+  position: relative;
+}
+.mobile_menu.active p:nth-child(2){
+  opacity: 0;
+}
+.mobile_menu.active p:nth-child(3){
+  rotate: -45deg;
+  top: -6px;
+  position: relative;
+}
   /* footer paragraph styling */
   footer p {
     padding: 3px 15px;
@@ -54,12 +75,7 @@
     width: 100px;
     border-radius: 3px;
   }
-
-  .mobile_menu p {
-    padding: 1.5px 10px;
-    background-color: black;
-  }
-
+  
   .hero {
     background: url(/assets/images/header-illsutration-mobile@2x.png);
     background-repeat: no-repeat;
@@ -104,16 +120,6 @@
     margin: 10px 15px;
   }
 
-  .social_icons ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    margin: 15px;
-    margin-right: 50px;
-    list-style: none;
-    width: 300px;
-  }
 
   .action {
     margin-top: 20px;
@@ -166,6 +172,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    align-items: center;
     gap: 10px;
     padding: 0 0 20px 0;
   }
@@ -219,7 +226,7 @@
   }
 
   .about_text {
-    background: url(./assets/images/abt_left_mob.svg) no-repeat left bottom, url(./assets/images/abt_mobile_right.svg) right top no-repeat;
+    background: url(./assets/images/abt_me_left_mobile.svg) no-repeat left bottom, url(./assets/images/abt_mobile_right.svg) right top no-repeat;
   }
 
   .about_text p {
@@ -274,7 +281,7 @@
     margin: 10px 0 30px 0;
     display: flex;
     gap: 20px;
-    background: url(assets/images/contact\ form-illustratoin-3-desktop.svg) bottom right;
+    background: url(assets/images/illustration-contact-form.svg) bottom right;
     background-repeat: no-repeat;
     color: #172b4d;
   }
@@ -329,6 +336,24 @@
     color: black;
     font-size: 23px;
   }
+  .social_icons ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 15px;
+    list-style: none;
+    width: 300px;
+    margin-left: 250px;
+    margin-right: 250px;
+  }
+  .mobile_menu {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    align-items: end;
+    margin: 10px 15px;
+  }
 
   /* footer styling */
   footer {
@@ -338,6 +363,72 @@
     flex-direction: column;
     margin: 10px;
   }
+  .modal{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+  background-color: rgb(134, 129, 129);
+   }
+   .modalImage{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    margin-bottom: 6px;
+    padding: 2px;
+  }
+  .modallink{
+    display: flex;
+    gap: 20px;
+    padding-top: 10px;
+    align-items: center;
+    justify-content: center;
+  }
+  .modallink a{
+    font-size:300;
+    font-weight:500;
+    text-transform: capitalize;
+  text-decoration: none;
+  }
+.modalcontent{
+  background-color: #ffffff;
+  padding: 5px;
+  border-radius: 8px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0 0 0 0.3);
+  margin: 20px;
+ 
+}
+.closebutton{
+  position: relative;
+  top: 30px;
+  left: 140px;
+  font-size: 35px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+}
+#modaltechnologies{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+#modaltechnologies li{
+background-color: #d0d9d4;
+padding: 5px 10px;
+border-radius: 3px;
+font-weight: 10px;
+}
 }
 
 /* TABLET SECTION */
@@ -348,6 +439,7 @@
     align-items: center;
     justify-content: center;
     gap: 15px;
+    
   }
 
   .projects_title {
@@ -372,7 +464,7 @@
   }
 
   .projects_cards {
-    display: grid;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -389,9 +481,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    align-items: center;
     gap: 10px;
     padding: 0 0 20px 0;
   }
+
 
   .project_card img {
     height: 100%;
@@ -442,19 +536,59 @@
   .desktop_menu {
     display: none;
   }
-
-  .mobile_menu {
+  .desktop_menu.active{
+    display: flex;
+    position: absolute;
+  height: 80vh;
+  width: 769px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  transition: all 50000s ease;
+  }
+  .desktop_menu.active ul{
+    z-index: 1000;
     display: flex;
     flex-direction: column;
-    gap: 3px;
-    align-items: end;
-    margin: 10px 15px;
+    list-style: none;
+    gap: 20px;
+    margin: 50px 30px;
+    transition: all 50000s ease;
   }
+  
+  .desktop_menu.active ul li a{
+    text-decoration: none;
+    color: #3A4A42;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 23px;
+    
+  }
+.mobile_menu {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  align-items: end;
+  margin: 10px 15px;
+}
 
-  .mobile_menu p {
-    padding: 1.5px 10px;
-    background-color: black;
-  }
+.mobile_menu p {
+  padding: 1.5px 10px;
+  background-color: black;
+}
+.mobile_menu.active p:nth-child(1){
+  rotate: 45deg;
+  top: 6px;
+  position: relative;
+}
+.mobile_menu.active p:nth-child(2){
+  opacity: 0;
+}
+.mobile_menu.active p:nth-child(3){
+  rotate: -45deg;
+  top: -6px;
+  position: relative;
+}
+
 
   .hero {
     background: url(/assets/images/header-illsutration-mobile@2x.png);
@@ -644,6 +778,90 @@
     margin-left: 250px;
     margin-right: 250px;
   }
+  hr{
+    display: none;
+  }
+
+  .p_tag {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    align-items: end;
+    margin: 10px 310px;
+   
+  }
+
+ .p_tag {
+    padding: 2.5px 20px;
+    background-color: black;
+    
+  }
+  .modal{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+  background-color: rgb(134, 129, 129);
+   }
+   .modalImage{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    margin-bottom: 6px;
+    padding: 2px;
+  }
+  .modallink{
+    display: flex;
+    gap: 20px;
+    padding-top: 10px;
+    align-items: center;
+    justify-content: center;
+  }
+  .modallink a{
+    font-size:300;
+    font-weight:500;
+    text-transform: capitalize;
+  text-decoration: none;
+  }
+.modalcontent{
+  background-color: #ffffff;
+  padding: 5px;
+  border-radius: 8px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0 0 0 0.3);
+  margin: 20px;
+ 
+}
+.closebutton{
+  position: relative;
+  top: 30px;
+  left: 140px;
+  font-size: 35px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+}
+#modaltechnologies{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+#modaltechnologies li{
+background-color: #d0d9d4;
+padding: 5px 10px;
+border-radius: 3px;
+font-weight: 10px;
+}
 }
 
 /* DESKTOP SECTION */
@@ -746,35 +964,48 @@
     display: flex;
   }
 
-  .desktop_menu {
+  .desktop_menu{
     display: grid;
-  }
-
-  .desktop_menu ul li a {
-    text-decoration: none;
-    display: flex;
-    color: black;
-    font-weight: bold;
-    font-size: 25px;
-  }
-
-  .desktop_menu ul {
-    text-decoration: none;
-    display: flex;
-    gap: 50px;
-    align-items: center;
-    justify-content: center;
-    padding: 2px 5px;
-  }
-
-  .desktop_menu ul li {
-    justify-content: center;
-    display: flex;
-  }
-
-  .mobile_menu {
-    display: none;
-  }
+   }
+   
+   .desktop_menu ul li a {
+     text-decoration: none;
+     display: flex;
+     color: black;
+     font-weight: bold;
+     font-size: 25px;
+     
+   }
+   
+   .desktop_menu ul {
+     text-decoration: none;
+     display: flex;
+     gap: 50px;
+     align-items: center;
+     justify-content: center;
+     padding: 2px 5px;
+     flex-direction: row;
+   }
+   
+   .desktop_menu ul li {
+     justify-content: center;
+     display: flex;
+   }
+   
+  
+   .mobile_menu {
+     display: none;
+     flex-direction: column;
+     gap: 3px;
+     align-items: end;
+     margin: 10px 15px;
+   }
+   
+   .mobile_menu p {
+     padding: 1.5px 10px;
+     background-color: black;
+   }
+   
 
   .hero {
     background: url(/assets/images/Header-llustration-desktop.svg);
@@ -837,9 +1068,10 @@
   }
 
   .about {
-    background: url(./assets/images/illustration-about-me-2-desktop.svg) top left, url(assets/images/illustration\ about\ me\ desktop.svg) top right;
+    background: url(./assets/images/illustration-about-me-2-desktop.svg) top left, url(assets/images/illustration\ about\ me\ desktop.svg)top right;
     background-repeat: no-repeat;
-    margin-top: 150px;
+    margin-top: 20px;
+
   }
 
   .about_text h2 {
@@ -960,6 +1192,10 @@
   .email {
     display: none;
   }
+  hr{
+    width: 100%;
+    margin-top: 50px;
+  }
 
   .social_icons ul {
     display: flex;
@@ -972,4 +1208,5 @@
     width: 300px;
     margin-right: 600px;
   }
+  
 }
