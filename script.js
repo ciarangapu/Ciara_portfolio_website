@@ -76,7 +76,7 @@ function closeModal() {
     // window.removeEventListener('click', outsideClick);
   }
 }
-//function for popup
+// function for popup
 
 function openModal(projects) {
   const modal = document.createElement('div');
@@ -162,7 +162,6 @@ function createProjectCard(project) {
   cardBtn.addEventListener('click', () => openModal(project));
   return card;
 }
-
 
 // Function to insert the  card in the projects_cards div
 
