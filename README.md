@@ -102,7 +102,8 @@ sh
   gh-pages
   netlify
   vercel
-
+## 🚀 Deployment Link <a name="deployment"></a>
+- Please Click on [this link](https://ciara-portfolio-website.vercel.app/) to see the live deployment of this project
 ## 👥 Authors <a name="authors"></a>
 
 👤 *Ciara Ngapu*
@@ -128,4 +129,3 @@ I will like to thank Codegisoft Academy and all the students i've collaborated w
 
 This project is [LICENSE.md](LICENSE.md) licensed.
 
-https://ciara-portfolio-website.vercel.app/
