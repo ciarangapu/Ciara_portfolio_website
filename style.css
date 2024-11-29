@@ -1249,19 +1249,17 @@
     align-items: center;
     justify-content: center;
     background-color: rgb(134, 129, 129);
+    padding: 50px 0;
   }
 
   .modal_style img {
     width: 550px;
-    height: 400px;
+    height: 350px;
     border-radius: 15px;
   }
 
   .modal_link {
-    display: flex;
-    padding-top: 10px;
-    align-items: center;
-    justify-content: center;
+  margin-top: 15px;
   }
 
   .modalcontent {
@@ -1270,15 +1268,15 @@
     border-radius: 8px;
     text-align: center;
     position: relative;
-    height: 650px;
+    height: 600px;
     margin: 20px;
     width: 590px;
   }
 
   .closebutton {
     position: relative;
-    top: 85px;
-    left: 225px;
+    top: 70px;
+    left: 205px;
     font-size: 50px;
     color: #333;
     cursor: pointer;
