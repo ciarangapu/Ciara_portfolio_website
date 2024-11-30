@@ -401,13 +401,13 @@
     text-align: center;
     position: relative;
     margin: 10px;
-    width: 450px;
+    width: 320px;
   }
 
   .closebutton {
     position: relative;
     top: 45px;
-    left: 125px;
+    left: 115px;
     font-size: 32px;
     font-weight: bold;
     color: #333;
@@ -560,7 +560,7 @@
   .desktop_menu.active {
     display: flex;
     position: absolute;
-    height: 80vh;
+    height: 70vh;
     width: 769px;
     border-radius: 8px;
     background-color: #fff;

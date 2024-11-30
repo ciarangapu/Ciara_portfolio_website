@@ -13,7 +13,7 @@ const projects = [
     title: 'Multi-Post Stories Gain+Glory',
     technologies: ['RubyOnRails', 'CSS', 'JavaScript', 'HTML'],
     link: '#',
-    githublink: '#',
+    githublink: 'https://github.com/ciarangapu/Ciara_portfolio_website.git',
     liveserverlink: '#',
   },
 
@@ -23,7 +23,7 @@ const projects = [
     title: 'Multi-Post Stories Gain+Glory',
     technologies: ['RubyOnRails', 'CSS', 'JavaScript', 'HTML'],
     link: '#',
-    githublink: '#',
+    githublink: 'https://github.com/ciarangapu/Ciara_portfolio_website.git',
     liveserverlink: '#',
   },
 
@@ -33,7 +33,7 @@ const projects = [
     title: 'Multi-Post Stories Gain+Glory',
     technologies: ['RubyOnRails', 'CSS', 'JavaScript', 'HTML'],
     link: '#',
-    githublink: '#',
+    githublink: 'https://github.com/ciarangapu/Ciara_portfolio_website.git',
     liveserverlink: '#',
   },
 
@@ -43,7 +43,7 @@ const projects = [
     title: 'Multi-Post Stories Gain+Glory',
     technologies: ['RubyOnRails', 'CSS', 'JavaScript', 'HTML'],
     link: '#',
-    githublink: '#',
+    githublink: 'https://github.com/ciarangapu/Ciara_portfolio_website.git',
     liveserverlink: '#',
   },
 
@@ -53,7 +53,7 @@ const projects = [
     title: 'Multi-Post Stories Gain+Glory',
     technologies: ['RubyOnRails', 'CSS', 'JavaScript', 'HTML'],
     link: '#',
-    githublink: '#',
+    githublink: 'https://github.com/ciarangapu/Ciara_portfolio_website.git',
     liveserverlink: '#',
   },
 
@@ -63,7 +63,7 @@ const projects = [
     title: 'Multi-Post Stories Gain+Glory',
     technologies: ['RubyOnRails', 'CSS', 'JavaScript', 'HTML'],
     link: '#',
-    githublink: '#',
+    githublink: 'https://github.com/ciarangapu/Ciara_portfolio_website.git',
     liveserverlink: '#',
   },
 
@@ -157,6 +157,7 @@ function createProjectCard(project) {
   card.appendChild(cardList);
   const cardBtn = document.createElement('button');
   cardBtn.type = 'button';
+  cardBtn.target = '_blanck'
   cardBtn.innerHTML = 'see project';
   card.appendChild(cardBtn);
   cardBtn.addEventListener('click', () => openModal(project));
