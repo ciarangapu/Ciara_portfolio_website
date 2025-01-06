@@ -21,7 +21,7 @@
   .desktop_menu.active {
     display: flex;
     position: absolute;
-    height: 99vh;
+    height: 108vh;
     width: 769px;
     border-radius: 8px;
     background-color: #fff;
