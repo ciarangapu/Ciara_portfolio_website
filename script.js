@@ -174,3 +174,110 @@ function insertCards() {
   });
 }
 document.addEventListener('DOMContentLoaded', insertCards);
+
+// //preserving data
+
+// const contact_form = document.getElementsByClassName('contact_form');
+// const Btn = document.getElementById('Btn');
+// Btn.addEventListener('onclick',() => saveTask());
+
+
+
+// const input2 = document. getElementById('mail');
+// const textarea = document.getElementById('serve');
+
+// function saveTask(){
+//   const input1 = document.getElementById('text');
+//   const textin=input1.ariaPlaceholder
+//   localStorage.setItem("data",textin);
+// }
+// //show data
+// function showTask(){
+//  contact_form.innerHTML = localStorage.getItem("data");
+// }
+// showTask();
+
+
+
+
+
+
+
+
+
+const ContactForm = document.querySelector(".contact_form");
+const abtBtn = document.querySelector(".abt_btn");
+function saveTask(){
+    localStorage.setItem("data",ContactForm.innerHTML);
+}
+abtBtn.addEventListener("click",saveTask());
+
+function showTask(){
+    ContactForm.innerHTML = localStorage.getItem("data");
+}
+showTask();
+document.addEventListener("DOMContentLoaded",showTask());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function addTask(){
+//     const text = todoInput.value;
+//     if(text === ""){
+//         alert("please enter some items");
+//     }
+//     else{
+// const todoItem = document.createElement("li");
+// todoItem.innerHTML= text;
+// todoList.appendChild(todoItem);
+// //add a delete button
+
+// const deleteBtn = document.createElement("span");
+// deleteBtn.innerHTML ="\u00d7";
+// todoItem.appendChild(deleteBtn);
+// saveTask();
+// }
+// }
+// //implement check and delete logic
+// todoList.addEventListener("click",function(e){
+//     if(e.target.tagName === "LI"){
+//         e.target.classList.toggle("checked");
+    
+//     }
+//     else if(e.target.tagName === "SPAN"){
+//         e.target.parentElement.remove();
+//     }
+// })
+// create local storage
+// function saveTask(){
+//     localStorage.setItem("data",List);
+// }
+// // retrive from local storage
+// function showTask(){
+//     List = localStorage.getItem("data");
+// }
+// showTask();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
